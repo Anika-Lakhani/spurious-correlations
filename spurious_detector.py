@@ -8,11 +8,12 @@ class SpuriousDetector:
     Detects and removes spurious correlations in a neural network model by analyzing concept importance
     and background correlations.
     """
-    def __init__(self, model, concept_vectors, concept_importances):
+    def __init__(self, model, concept_vectors, concept_importances, validation_data):
         self.model = model
         self.concepts = concept_vectors
         self.importances = concept_importances
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        self.validation_data = validation_data
 
     ###########################################
     # Main Public Methods
