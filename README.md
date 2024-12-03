@@ -25,3 +25,29 @@ The project is focused on:
 2. Using multiple concept activation methods (ACE and CRAFT)
 3. Creating a mathematical framework to automatically detect spurious correlations
 4. Analyzing how models make decisions and identifying potential biases
+
+## Spurious Detector
+
+The `spurious_detector.py` module provides tools for detecting and analyzing spurious correlations in neural network models. It works by analyzing the relationship between concept activations, their importances, and model predictions.
+
+### How It Works
+
+The `SpuriousDetector` class operates in three main steps:
+
+1. **Initialization**
+   - Loads pre-computed concept vectors and their importances
+   - Takes a trained model and validation dataset as input
+   - Requires results from previous concept extraction (using ACE or CRAFT)
+
+2. **Spurious Score Calculation**
+   - For each concept, calculates:
+     - Concept importance from pre-computed data
+     - Correlation between concept activations and model predictions
+     - Combined score using both metrics
+
+3. **Spurious Concept Identification**
+   - Uses a threshold-based approach to identify potentially spurious concepts
+   - Ranks concepts by their combined spurious scores
+   - Saves analysis results for further investigation
+
+### Usage
