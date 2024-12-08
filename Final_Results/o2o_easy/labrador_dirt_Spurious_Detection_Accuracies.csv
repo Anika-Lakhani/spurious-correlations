@@ -1,0 +1,12 @@
+# Title: Spurious Detection Accuracies for Labrador-Dirt
+
+,method,accuracy,num_concepts
+0,med-mean,1.0,4
+1,mean,1.0,4
+2,median,0.0,4
+3,med-mean,0.0,7
+4,mean,1.0,7
+5,median,0.0,7
+6,med-mean,0.0,10
+7,mean,1.0,10
+8,median,0.0,10
