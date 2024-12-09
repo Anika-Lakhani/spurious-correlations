@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import sys
+import os
 
 def create_spurious_score_plot(csv_path):
     # Read the CSV file
@@ -87,8 +88,11 @@ def create_spurious_score_plot(csv_path):
     
     # Save the plot
     plot_filename = csv_path.rsplit('.', 1)[0] + '_methods_plot.png'
-    print(f"Saving plot to: {plot_filename}")
-    plt.savefig(plot_filename, bbox_inches='tight', dpi=300)
+    output_dir = 'final_results/o2o_easy/o2o_easy_graphs/spurious_score_plots'
+    os.makedirs(output_dir, exist_ok=True)
+    output_path = os.path.join(output_dir, os.path.basename(plot_filename))
+    print(f"Saving plot to: {output_path}")
+    plt.savefig(output_path, bbox_inches='tight', dpi=300)
     plt.close()
 
 if __name__ == "__main__":

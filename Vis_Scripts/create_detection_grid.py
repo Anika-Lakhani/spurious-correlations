@@ -78,8 +78,11 @@ def create_detection_grid(csv_path):
         plt.tight_layout()
         
         # Save plot
-        plot_filename = os.path.join(os.path.dirname(csv_path), f'{pairing}_detection_grid.png')
-        plt.savefig(plot_filename, bbox_inches='tight', dpi=300)
+        output_dir = 'final_results/o2o_easy/o2o_easy_graphs/detection_grids'
+        os.makedirs(output_dir, exist_ok=True)
+        plot_filename = f'{pairing}_detection_grid.png'
+        output_path = os.path.join(output_dir, plot_filename)
+        plt.savefig(output_path, bbox_inches='tight', dpi=300)
         plt.close()
 
 if __name__ == "__main__":
