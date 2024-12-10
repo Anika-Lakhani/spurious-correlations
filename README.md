@@ -59,5 +59,4 @@ If you use this code, please cite:
 [Citation information]
 
 Citations:
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/40563524/271804ba-64fe-4955-9180-85d9b0d8e772/Experiment-1.ipynb
-[3] https://github.com/Anika-Lakhani/spurious-correlations
+https://github.com/Anika-Lakhani/spurious-correlations
